@@ -6,6 +6,10 @@ This library provides you MySQL functions for Doctrine2.
 At the moment are supported
 
  - CONCAT_WS
+ - DATE
+ - YEAR
+ - MONTH
+ - DAY
 
 Feel free to fork and add other functions.
 
