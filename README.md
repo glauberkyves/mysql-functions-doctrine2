@@ -6,6 +6,10 @@ This library provides you MySQL functions for Doctrine2.
 At the moment are supported
 
  - CONCAT_WS
+ - DATE
+ - YEAR
+ - MONTH
+ - DAY
 
 Feel free to fork and add other functions.
 
@@ -57,7 +61,12 @@ doctrine:
                 # ...
                 dql:
                     string_functions:
-                        concat_ws:        GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlConcatWs
+                        concat_ws: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlConcatWs
+                        month: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlMonth
+                    datetime_functions:
+                        date: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlDate
+                        day: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlDay
+                        year: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlYear
 ```
 
 ### Usage
