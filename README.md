@@ -57,7 +57,12 @@ doctrine:
                 # ...
                 dql:
                     string_functions:
-                        concat_ws:        GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlConcatWs
+                        concat_ws: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlConcatWs
+                        month: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlMonth
+                    datetime_functions:
+                        date: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlDate
+                        day: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlDay
+                        year: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlYear
 ```
 
 ### Usage
