@@ -6,6 +6,7 @@ This library provides you MySQL functions for Doctrine2.
 At the moment are supported
 
  - CONCAT_WS
+ - GEO
  - DATE
  - YEAR
  - MONTH
@@ -63,6 +64,8 @@ doctrine:
                     string_functions:
                         concat_ws: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlConcatWs
                         month: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlMonth
+                    numeric_functions:
+                        geo: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlGeo
                     datetime_functions:
                         date: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlDate
                         day: GlauberKyves\MysqlDoctrineFunctions\DQL\MysqlDay
@@ -73,9 +76,9 @@ doctrine:
 You can now use the functions in your DQL Query
 
 ```php
-$query = 'SELECT CONCAT_WS('string', 'string')
-        FROM ...
-    ';
+$query = 'SELECT CONCAT_WS('string', 'string') FROM ...';
 $em->createQuery($query);
 
+$query = 'SELECT GEO(-15.5656, -47.5656, t.latitude, t.longitude) FROM tb_address t ...';
+$em->createQuery($query);
 ```
